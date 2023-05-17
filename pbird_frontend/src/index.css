@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  /*font-family: Roboto;*/
+}
+
+::-webkit-scrollbar {
+  background-color: white;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1dbf73;
+}
+
+@media only screen and (max-width: 1366px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+.text-editer::-webkit-scrollbar {
+  background-color: gold;
+  width: 10px;
+}
+
+.text-editer::-webkit-scrollbar-thumb {
+  background-color: #731dbf;
+}
+
+@font-face {
+  font-family: myriad;
+  src: url("./assets/fonts/Myriad\ Hebrew.ttf");
+}

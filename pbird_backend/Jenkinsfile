@@ -1,0 +1,32 @@
+pipeline {
+  agent any
+  stages {
+    stage('Create Env') {
+       steps {
+          echo 'Start setting up env'
+          updateGitlabCommitStatus name: 'Create Env', state: 'pending'
+          bat 'virtualenv env'
+          bat 'env\\scripts\\activate'
+          updateGitlabCommitStatus name: 'Create Env', state: 'success'
+       }
+    }
+    stage('Install Requirements') {
+       steps {
+          echo 'Start installing requirements'
+          updateGitlabCommitStatus name: 'Install Requirements', state: 'pending'
+          bat 'python -m pip install -r requirements.txt'
+          updateGitlabCommitStatus name: 'Install Requirements', state: 'success'
+       }
+    }
+    stage('Pylint') {
+       steps {
+          echo 'Coming soon ...'
+       }
+    }
+    stage('Deploy') {
+       steps {
+          echo 'Coming soon ...'
+       }
+    }
+ }
+}

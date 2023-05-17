@@ -1,0 +1,25 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: check-yaml
+
+-   repo: https://github.com/PyCQA/pylint
+    rev: pylint-2.4.4
+    hooks:
+    -   id: pylint
+        name: pylint
+        entry: pylint
+        language: python
+        types: [python]
+        args: [--rcfile=.pylintrc]
+        additional_dependencies: [django, pylint-django]
+
+-   repo: https://github.com/psf/black
+    rev: stable
+    hooks:
+    -   id: black
+        language_version: python3.9
